@@ -1,3 +1,3 @@
 output "ec2instance" {
-  value = aws_instance.project-iac.public_ip
+  value = aws_instance.inst.public_ip
 }
