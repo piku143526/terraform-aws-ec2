@@ -1,4 +1,4 @@
-resource "aws_security_group" "sg1" {
+resource "aws_security_group" "sg2" {
   name        = var.sec_name
   description = var.sec_desc
   vpc_id      = var.vpc_id
@@ -32,14 +32,14 @@ resource "aws_security_group" "sg1" {
 }
 
 
-resource "aws_instance" "inst" {
+resource "aws_instance" "new" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name      = var.key_name
 
 
   vpc_security_group_ids = [
-    aws_security_group.sg1.id
+    aws_security_group.sg2.id
   ]
   root_block_device {
     delete_on_termination = true
@@ -50,5 +50,5 @@ resource "aws_instance" "inst" {
     Name = var.tag_name
   }
 
-  depends_on = [aws_security_group.sg1]
+  depends_on = [aws_security_group.sg2]
 }

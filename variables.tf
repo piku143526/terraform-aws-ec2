@@ -6,7 +6,7 @@ variable "region" {
 
 variable "sec_name" {
   type    = string
-  default = "test1"
+  default = "test2"
 }
 
 variable "sec_desc" {
@@ -41,7 +41,7 @@ variable "key_name" {
 
 variable "tag_name" {
   type    = string
-  default = "test1"
+  default = "test2"
 }
 
 variable "access_key" {
