@@ -6,7 +6,7 @@ variable "region" {
 
 variable "sec_name" {
   type    = string
-  default = "test-sg"
+  default = "test1"
 }
 
 variable "sec_desc" {
@@ -41,7 +41,15 @@ variable "key_name" {
 
 variable "tag_name" {
   type    = string
-  default = "test-ec2"
+  default = "test1"
 }
 
+variable "access_key" {
+  type    = string
+  default = "AKIASDOFDCVQLY6XNCFJ"
+}
 
+variable "secret_key" {
+  type    = string
+  default = "h3b6drTECyjuP6C3n+DcQVk2yvquhHIEVmbiBCj+"
+}
