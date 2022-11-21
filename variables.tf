@@ -16,7 +16,7 @@ variable "sec_desc" {
 
 variable "vpc_id" {
   type    = string
-  default = "vpc-0d86b4ff994ca02b6"
+  default = "vpc-0090174c8d23ba32f"
 }
 
 variable "create_before_destroy" {
@@ -26,7 +26,7 @@ variable "create_before_destroy" {
 
 variable "ami" {
   type    = string
-  default = "ami-052efd3df9dad4825"
+  default = "ami-08c40ec9ead489470"
 }
 
 variable "instance_type" {
@@ -46,10 +46,10 @@ variable "tag_name" {
 
 variable "access_key" {
   type    = string
-  default = "AKIASDOFDCVQLY6XNCFJ"
+  default = "AKIA6DZ35SAALVZ3TU7O"
 }
 
 variable "secret_key" {
   type    = string
-  default = "h3b6drTECyjuP6C3n+DcQVk2yvquhHIEVmbiBCj+"
+  default = "4vuP10OIfjlztclm8CfrDuKfTNhSxzm1BvGjGP7B"
 }
