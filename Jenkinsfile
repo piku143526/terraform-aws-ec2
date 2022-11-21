@@ -1,20 +1,27 @@
 pipeline {
     agent any
-
+    tools {
+       terraform 'terraform'
+    }
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
+        stage('Git checkout') {
+           steps{
+                git branch: 'main', credentialsId: 'Github', url: 'https://github.com/piku143526/terraform-ec2.git'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+        stage('terraform format check') {
+            steps{
+                sh 'terraform fmt'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+        stage('terraform Init') {
+            steps{
+                sh 'terraform plan'
+            }
+        }
+        stage('terraform apply') {
+            steps{
+                sh 'terraform apply --auto-approve'
             }
         }
     }
