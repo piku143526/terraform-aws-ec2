@@ -46,10 +46,10 @@ variable "tag_name" {
 
 variable "access_key" {
   type    = string
-  default = "AKIA6DZ35SAAAZS3TGU4"
+  default = "Access Key ID"
 }
 
 variable "secret_key" {
   type    = string
-  default = "d8eCTuqbBTdVYISNCk3hQ5gfi5PwipoyOZ8QeTu4"
+  default = "Secret Access Key"
 }
